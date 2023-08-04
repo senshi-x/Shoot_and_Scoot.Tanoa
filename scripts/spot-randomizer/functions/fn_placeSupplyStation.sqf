@@ -58,7 +58,7 @@ _net       setDamage 0.8;   // start with low health to fix https://github.com/g
 _container remoteExec ["spot_randomizer_fnc_initStationClient", 0, true]; // Init any local container stuff for all players (incl. JIP!)
 
 // add a trigger area to restock ammo trucks (incl. Stompers)
-[_fuzzyPosition, _rotation] call spot_randomizer_fnc_placeRestockArea;
+_container call spot_randomizer_fnc_placeRestockArea;
 
 private _idx = _container addEventHandler [ "HandleDamage", {
     params ["_container", "_selection", "_damage", "_source", "_ammo", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
